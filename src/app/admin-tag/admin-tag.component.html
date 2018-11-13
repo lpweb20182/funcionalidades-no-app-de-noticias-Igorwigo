@@ -1,0 +1,17 @@
+<h1>Cadastrar Tags</h1>
+<br>
+<form class="mt-1" #cadastro="ngForm" (submit)="salvar()">
+  <div *ngIf="salvar_ok" class="alert alert-success">
+    Tag alterada com sucesso!
+  </div>
+  <div *ngIf="salvar_erro" class="alert alert-warning">
+    Não foi possível alterar a tag. Tente novamente dentro de instantes.
+  </div>
+  <div class="form-group">
+    <label for="titulo">Tag</label>
+    <input type="text" class="form-control" name="tag" id="tag" [(ngModel)]="tag" value="tag" required>
+  </div>
+
+    <button class="btn btn-primary">Salvar</button>
+  </div>
+</form>
